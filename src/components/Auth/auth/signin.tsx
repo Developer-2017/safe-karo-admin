@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/Blue_Sparinglogo.png";
+import logo from "../../../assets/login_logo.png";
 import { useNavigate } from "react-router-dom";
 
 const signin = () => {
