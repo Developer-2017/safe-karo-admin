@@ -1,12 +1,14 @@
-import Home from "./components/Home/Home";
-import Signin from "./components/Auth/auth/signin";
-import SignUp from "./components/Auth/auth/signup";
+import Signin from "./components/Auth/signin";
+import SignUp from "./components/Auth/signup";
 import Role from "./components/Role/role";
-import Vehicle from "./components/vehicle/vehicle";
-import VehicleSubType from "./components/vehicle/vehicleSubType";
+import AddVehicle from "./components/vehicle/vehicle/AddVehicle/AddVehicle";
+import AddLead from "./components/Agent/AddLead/AddLead";
+import Dashboard from "./components/Dashboard/dashboard";
+import VehicleSubType from "./components/vehicle/VehicleType/VehicleSubType";
+import AddCaseType from "./components/CaseType/AddCaseType/AddCaseType";
 
-const routes =[
- {
+const routes = [
+  {
     path: "/",
     //element: <DashboardLayout />,
     children: [
@@ -15,8 +17,8 @@ const routes =[
         element: <Signin />,
       },
     ],
-},
-{
+  },
+  {
     path: "/signup",
     //element: <DashboardLayout />,
     children: [
@@ -25,48 +27,71 @@ const routes =[
         element: <SignUp />,
       },
     ],
-},
-{
-    path: "/home",
+  },
+  {
+    path: "/dashboard",
     //element: <DashboardLayout />,
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <Dashboard />,
       },
     ],
-},
-{
-  path: "/role",
-  //element: <DashboardLayout />,
-  children: [
-    {
-      path: "",
-      element: <Role />,
-    },
-  ],
-},
-{
-  path: "/vehicle",
-  //element: <DashboardLayout />,
-  children: [
-    {
-      path: "",
-      element: <Vehicle />,
-    },
-  ],
-},
-{
-  path: "/vehiclesubtype",
-  //element: <DashboardLayout />,
-  children: [
-    {
-      path: "",
-      element: <VehicleSubType />,
-    },
-  ],
-},
-]
+  },
+  {
+    path: "/lead",
+    //element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <AddLead />,
+      },
+    ],
+  },
+  {
+    path: "/role",
+    //element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <Role />,
+      },
+    ],
+  },
+  {
+    path: "/vehicle",
+    //element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <AddVehicle />,
+      },
+    ],
+  },
+  {
+    path: "/vehiclesubtype",
+    //element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <VehicleSubType />,
+      },
+    ],
+  },
+  {
+    path: "casetype",
+    //element: <DashboardLayout />,
+    children: [
+      {
+        path: "/casetype/add",
+        element: <AddCaseType />,
+      },
+      {
+        path: "",
+        element: <AddCaseType />,
+      },
+    ],
+  },
+];
 
-export default routes
-
+export default routes;
