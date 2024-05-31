@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/login_logo.png";
+import logo from "../../assets/login_logo.png";
 
 const signup = () => {
   return (

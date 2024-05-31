@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/login_logo.png";
+import logo from "../../assets/login_logo.png";
 import { useNavigate } from "react-router-dom";
 
 const signin = () => {
@@ -10,7 +10,7 @@ const signin = () => {
   const handleSubmit = () => {
     // e.preventDefault();
     // Add your signin logic here
-    navigate("/home");
+    navigate("/dashboard");
   };
 
   return (

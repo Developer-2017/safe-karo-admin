@@ -1,19 +1,18 @@
 import React from "react";
 import { TextField, Button, Grid, Typography, Paper } from "@mui/material";
 
-const role = () => {
+const AddVehicle = () => {
   return (
-    <>
-    
+    <div>
+  
           <Paper elevation={3} style={{ padding: 20 }}>
             <Typography variant="h5" gutterBottom>
-              Add Role's
+              Add Vehicle's Type
             </Typography>
 
             <Grid container spacing={2}>
-            
               <Grid item xs={12}>
-                <TextField size="small" label="Enter Role Name" name="roleName" />
+                <TextField size="small" label="Vehicle Type" name="vehicle" />
               </Grid>
               <Grid item xs={12}>
                 <Button type="submit" variant="contained" color="primary">
@@ -22,9 +21,9 @@ const role = () => {
               </Grid>
             </Grid>
           </Paper>
-        
-    </>
+     
+    </div>
   );
 };
 
-export default role;
+export default AddVehicle;
