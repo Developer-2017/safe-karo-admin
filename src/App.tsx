@@ -6,15 +6,22 @@ import Header from "./components/Header/header";
 
 function App() {
   const content = useRoutes(routes);
+  console.log(content?.props.match.route );
   return (
     <>
-      <div className="flex h-screen bg-gray-100">
-        <Sidebar />
-        <div className="flex flex-col flex-1 overflow-y-auto">
-          <Header />
-          {content}
-        </div>
-      </div>
+      {content?.props.match.path === "/" ? (
+        { content }
+      ) : (
+        <>
+          <div className="flex h-screen bg-gray-100">
+            <Sidebar />
+            <div className="flex flex-col flex-1 overflow-y-auto">
+              <Header />
+              {content}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }
